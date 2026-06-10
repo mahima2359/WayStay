@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: waystay
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SECRET
+        generateValue: true
+      - key: ATLAS_DB
+        sync: false
+      - key: CLOUD_NAME
+        sync: false
+      - key: CLOUD_API_KEY
+        sync: false
+      - key: CLOUD_API_SECRET
+        sync: false
+      - key: MAP_TOKEN
+        sync: false
