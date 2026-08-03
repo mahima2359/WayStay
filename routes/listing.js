@@ -16,7 +16,7 @@ router
         validateListing,
         wrapAsync(listingController.createListing)
     );
-
+        
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
 router
