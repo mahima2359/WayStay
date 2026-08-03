@@ -24,8 +24,8 @@
         </div>
     </div>
     
-    <% if (currentUser && listing.owner._id.equals(currentUser._id)) { %>
-        <div class="col-10 offset-1 mt-1 mb-2">
+<% if (currentUser && listing.owner && listing.owner._id.equals(currentUser._id)) { %>
+            <div class="col-10 offset-1 mt-1 mb-2">
             <div class="btns">
                 <a href="/listings/edit/<%= listing._id %>">
                     <button class="btn btn-dark ml-2">Edit&nbsp;&nbsp;<i class="fas fa-edit"></i></button>
